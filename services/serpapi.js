@@ -13,7 +13,7 @@ const client = axios.create({
 client.interceptors.request.use((c) => {
   c.params = {
     key: config.SERPAPI_API_KEY,
-    ..c.params,
+    ...c.params,
   };
   return handleRequest(c);
 });
